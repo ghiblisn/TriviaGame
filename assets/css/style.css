@@ -1,0 +1,18 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.textCenter{
+	text-align: center;
+	align-content: center;
+}
+.notDisplayed{
+	display: none;
+}
+.answerChoiceClass{
+	width:30%;
+}
+#timer, #question, #answerChoice, #correctAnswer, #correctAnswerPic, #gameSummary, #restart{
+	margin-top: 20px;
+}

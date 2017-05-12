@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/reset.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    
+    
+    <!-- Bring in bootstrap stylesheet -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    
+    <!-- Bring in personal stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Bring in bootswatch theme -->
+    <link rel="stylesheet" href="https://bootswatch.com/slate/bootstrap.css">
+
+    <!-- Bring in google font -->
+    <link href="https://fonts.googleapis.com/css?family=Rationale|Russo+One" rel="stylesheet">
+
+    <!-- Bring in javascript -->
+    <script src="assets/javascript/app.js"></script>
+
+    <title>Totally Pixar Trivia!</title>
+  </head>
+  <body>
+
+  <h1 class="page-header textCenter" font-family="'Lobster', cursive">Pixar Trivia!</h1>
+
+  <div class="container">
+    <div class="textCenter startButton">
+      <button type="button" class="btn btn-default" id="start">Start</button>
+    </div>
+
+    <div id="timer" class="textCenter"></div>
+
+    <div id="question" class="textCenter"></div>
+
+    <div id="answerChoice" class="textCenter notDisplayed">
+      <div><button type="button" class="btn btn-default answerChoiceClass" id="answerChoice1"></button></div>
+      <div><button type="button" class="btn btn-default answerChoiceClass" id="answerChoice2"></button></div>
+      <div><button type="button" class="btn btn-default answerChoiceClass" id="answerChoice3"></button></div>
+      <div><button type="button" class="btn btn-default answerChoiceClass" id="answerChoice4"></button></div>
+    </div>
+
+    <div id="correctAnswer" class="textCenter"></div>
+
+    <div id="correctAnswerPic" class="textCenter"></div>
+
+    <div id="gameSummary" class="textCenter"></div>
+
+    <div class="textCenter restartButton notDisplayed">
+      <button type="button" class="btn btn-default" id="restart">Replay</button>
+    </div>
+  
+  </div>
+
+  </body>
+</html>
+

@@ -25,7 +25,7 @@ var triviaBank=[
 	4,
 	'<img src="assets/images/wall-e.gif" width="480" height="271" frameBorder="0">'],
 	["Up",
-	"What is the name of the ballon salesman in the movie Up?",
+	"What is the name of the balloon salesman in the movie Up?",
 	"Eric",
 	"Carl",
 	"Russel",
@@ -41,7 +41,7 @@ var triviaBank=[
 	3,
 	'<img src="assets/images/ratatouille.gif" width="480" height="271" frameBorder="0">']
 ];
-var currentTimer=5;
+var currentTimer=10;
 var currentQuestion=0;
 var timerInterval=0;
 var answerResult="";
@@ -49,19 +49,20 @@ var correctAnswer=0;
 var incorrectAnswer=0;
 var unanswered=0;
 
-$(document).on("click","#answerChoice1",function(){answerChoiceClick(1);});
-$(document).on("click","#answerChoice2",function(){answerChoiceClick(2);});
-$(document).on("click","#answerChoice3",function(){answerChoiceClick(3);});
-$(document).on("click","#answerChoice4",function(){answerChoiceClick(4);});
-$(document).on("click","#restart",function(){restart();});
-
-
 $( document ).ready(function() {
 	$("#start").click(function(){
 		startTimer();
 		$(".startButton").addClass("notDisplayed");
+		$("#correctAnswerPic").html("");
 		generateQuestion(currentQuestion);
 	});
+
+	$(document).on("click","#answerChoice1",function(){answerChoiceClick(1);});
+	$(document).on("click","#answerChoice2",function(){answerChoiceClick(2);});
+	$(document).on("click","#answerChoice3",function(){answerChoiceClick(3);});
+	$(document).on("click","#answerChoice4",function(){answerChoiceClick(4);});
+	$(document).on("click","#restart",function(){restart();});
+
 });
 
 function startTimer(){
@@ -78,7 +79,7 @@ function startTimer(){
 function outOfTime(){
 	clearInterval(timerInterval);
 	unanswered++;
-	answerResult="Out of time";
+	answerResult="<div style='color:teal;'>Out of time!</div>";
 	generateAnswer();
 
 };
@@ -95,7 +96,7 @@ function generateQuestion(x){
 };
 
 function generateAnswer(){
-	currentTimer=5;
+	currentTimer=10;
 	displayAnswer();
 	if(currentQuestion<(triviaBank.length-1)){
 		currentQuestion++;
